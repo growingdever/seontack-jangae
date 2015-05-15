@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MoveForwardPersistantly : MonoBehaviour {
 
+	public SceneControllerBattle SceneController;
 	public float Speed;
 	public GameObject EffectCrash;
 	public bool IsEffectCreator;
@@ -48,6 +49,9 @@ public class MoveForwardPersistantly : MonoBehaviour {
 				clone.transform.localPosition = collision.transform.localPosition;
 				clone.transform.localScale = new Vector3(1, 1, 1);
 				clone.transform.localRotation = Quaternion.Euler(0, 180, 0);
+
+				// Tell to SceneController
+				SceneController.OnCollisionBetweenBattleCharacter();
 			}
 		}
 	}

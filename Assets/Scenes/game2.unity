@@ -604,6 +604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1c8f5b35baa49bfb66793d1fbeb026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneController: {fileID: 1773576108}
   Speed: -10
   EffectCrash: {fileID: 147838, guid: d85ac8e3bfb0547da84a5788f2ab9b7f, type: 2}
   IsEffectCreator: 0
@@ -738,6 +739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa1c8f5b35baa49bfb66793d1fbeb026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneController: {fileID: 1773576108}
   Speed: 10
   EffectCrash: {fileID: 147838, guid: d85ac8e3bfb0547da84a5788f2ab9b7f, type: 2}
   IsEffectCreator: 1

@@ -10,6 +10,7 @@ public class BattleCharacter {
 	}
 
 	public BattleCharacter(AbilityData ability) {
+		this.HP = ability.MaxHP;
 		this.Ability = ability;
 	}
 

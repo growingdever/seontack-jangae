@@ -19,6 +19,8 @@ public class SceneControllerBattle : MonoBehaviour {
 	}
 
 	public void OnCollisionBetweenBattleCharacter() {
+		print ("damage!");
+
 		float calculatedDamage1 = _battleCharacterPlayer.CalculateDamage (_battleCharacterMonster);
 		float calculatedDamage2 = _battleCharacterMonster.CalculateDamage (_battleCharacterPlayer);
 
