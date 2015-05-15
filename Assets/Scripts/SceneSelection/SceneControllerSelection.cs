@@ -22,6 +22,15 @@ public class SceneControllerSelection : MonoBehaviour {
 		}
 	}
 
+	public void InitPlayerStats() {
+		VariableStorage.Instance.PlayerStats1 = 
+			(SpriteSeeks[0].transform.localPosition.x + 1.0f * SeekWidth / 2.0f)  / SeekWidth;
+		VariableStorage.Instance.PlayerStats2 = 
+			(SpriteSeeks[1].transform.localPosition.x + 1.0f * SeekWidth / 2.0f)  / SeekWidth;
+		VariableStorage.Instance.PlayerStats3 = 
+			(SpriteSeeks[2].transform.localPosition.x + 1.0f * SeekWidth / 2.0f)  / SeekWidth;
+	}
+
 	IEnumerator ChooseNextAbility() {
 		while (_currAbility < SpriteSeeks.Length) {
 			_keyDownSpace = false;
