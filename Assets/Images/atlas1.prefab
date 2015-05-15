@@ -54,9 +54,87 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: bar-back
+    x: 1410
+    y: 2016
+    width: 256
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: bar-back2
+    x: 1410
+    y: 1950
+    width: 256
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: bar-back3
+    x: 1667
+    y: 1983
+    width: 256
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: bar-blue
+    x: 1410
+    y: 1983
+    width: 256
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: bar-red
+    x: 1667
+    y: 1950
+    width: 256
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: bar-white
+    x: 1667
+    y: 2016
+    width: 256
+    height: 32
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   - name: hp-icon-player
     x: 1281
-    y: 1920
+    y: 1791
     width: 128
     height: 128
     borderLeft: 0
@@ -69,7 +147,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: hp-icon-tree
     x: 1281
-    y: 1791
+    y: 1920
     width: 128
     height: 128
     borderLeft: 0
