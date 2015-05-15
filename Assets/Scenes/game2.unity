@@ -439,9 +439,50 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11461330, guid: ae9095491f7d64bcdaf056621504669a, type: 2}
+  mAtlas: {fileID: 11468568, guid: bf8bcef9d55ce4192bfdb54df80d8c85, type: 2}
   mSpriteName: background-default
   mFillCenter: 1
+--- !u!1 &1773576107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1773576109}
+  - 114: {fileID: 1773576108}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1773576108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773576107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec0eba510bf674a5687e88a2b42738a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObjectPlayer: {fileID: 1890986511}
+  GameObjectMonster: {fileID: 1856076575}
+--- !u!4 &1773576109
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773576107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
 --- !u!1 &1856076575
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +578,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11461330, guid: ae9095491f7d64bcdaf056621504669a, type: 2}
+  mAtlas: {fileID: 11468568, guid: bf8bcef9d55ce4192bfdb54df80d8c85, type: 2}
   mSpriteName: hp-icon-player
   mFillCenter: 1
 --- !u!4 &1856076579
@@ -683,7 +724,7 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
-  mAtlas: {fileID: 11461330, guid: ae9095491f7d64bcdaf056621504669a, type: 2}
+  mAtlas: {fileID: 11468568, guid: bf8bcef9d55ce4192bfdb54df80d8c85, type: 2}
   mSpriteName: hp-icon-player
   mFillCenter: 1
 --- !u!114 &1890986516
