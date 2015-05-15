@@ -4,6 +4,8 @@ using System.Collections;
 public class MoveForwardPersistantly : MonoBehaviour {
 
 	public float Speed;
+	public GameObject EffectCrash;
+	public bool IsEffectCreator;
 	Rigidbody2D rigidbody2d;
 	ConstantForce2D constantForce2d;
 
@@ -39,6 +41,14 @@ public class MoveForwardPersistantly : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D collision) {
 		if (collision.gameObject.GetComponent<MoveForwardPersistantly> () != null) {
 			CurrentState = State.Collided;
+
+			if( IsEffectCreator ) {
+				GameObject clone = Instantiate(EffectCrash.gameObject, this.transform.position, Quaternion.identity) as GameObject;
+				clone.transform.parent = this.transform.parent;
+				clone.transform.localPosition = collision.transform.localPosition;
+				clone.transform.localScale = new Vector3(1, 1, 1);
+				clone.transform.localRotation = Quaternion.Euler(0, 180, 0);
+			}
 		}
 	}
 	
