@@ -27,7 +27,9 @@ public class MoveForwardPersistantly : MonoBehaviour {
 			} else if( _currState == State.Collided ) {
 				constantForce2d.relativeForce = new Vector2(-1 * Speed * 0.5f, 0);
 				rigidbody2d.AddRelativeForce( new Vector2(0, 100) );
-				StartCoroutine( TransitionStateWithDelay(0.5f) );
+				if( this.gameObject.activeSelf ) {
+					StartCoroutine( TransitionStateWithDelay(0.5f) );
+				}
 			}
 		}
 	}

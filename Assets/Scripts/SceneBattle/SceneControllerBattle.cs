@@ -9,6 +9,9 @@ public class SceneControllerBattle : MonoBehaviour {
 	BattleCharacter _battleCharacterMonster;
 
 	void Start() {
+		// for debugging
+		PlayerPrefs.SetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1);
+
 		_battleCharacterPlayer = new BattleCharacter (
 			new AbilityData(VariableStorage.Instance.PlayerStats1, 
 		                VariableStorage.Instance.PlayerStats2, 
