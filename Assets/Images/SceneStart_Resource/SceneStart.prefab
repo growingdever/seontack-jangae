@@ -1,51 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &103644
+--- !u!1 &105214
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 457518}
-  - 114: {fileID: 11461330}
+  - 4: {fileID: 420678}
+  - 114: {fileID: 11419196}
   m_Layer: 0
-  m_Name: atlas1
+  m_Name: SceneStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &457518
+--- !u!4 &420678
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103644}
+  m_GameObject: {fileID: 105214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11461330
+--- !u!114 &11419196
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 103644}
+  m_GameObject: {fileID: 105214}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 1b513e19ad0e7004a8ce4929b03d6f8c, type: 2}
+  material: {fileID: 2100000, guid: 8d80b8264ab1c344cb8ee361d34fdeb7, type: 2}
   mSprites:
-  - name: background-default
+  - name: Gothic
     x: 0
-    y: 1328
-    width: 1280
-    height: 720
+    y: 1508
+    width: 1116
+    height: 540
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -54,32 +54,45 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: hp-icon-player
-    x: 1281
-    y: 1920
-    width: 128
-    height: 128
+  - name: walk_00
+    x: 1117
+    y: 1798
+    width: 78
+    height: 124
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
+    paddingLeft: 9
+    paddingRight: 9
+    paddingTop: 4
     paddingBottom: 0
-  - name: hp-icon-tree
-    x: 1281
-    y: 1791
-    width: 128
-    height: 128
+  - name: walk_01
+    x: 1117
+    y: 1670
+    width: 55
+    height: 127
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 0
+    paddingLeft: 9
+    paddingRight: 32
+    paddingTop: 1
     paddingBottom: 0
+  - name: walk_02
+    x: 1117
+    y: 1923
+    width: 83
+    height: 125
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 7
+    paddingRight: 6
+    paddingTop: 1
+    paddingBottom: 2
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0
@@ -93,5 +106,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 103644}
+  m_RootGameObject: {fileID: 105214}
   m_IsPrefabParent: 1
