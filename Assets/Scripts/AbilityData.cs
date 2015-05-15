@@ -10,14 +10,6 @@ public class AbilityData {
 	public float Error2 { get; private set; }
 	public float Error3 { get; private set; }
 
-	public float MaxHP {
-		get {
-			//TODO : calculate hp by ability
-			return 100;
-		}
-	}
-
-
 	public AbilityData(float ability1, float ability2, float ability3) {
 		Initialize (ability1, ability2, ability3, 0, 0, 0);
 	}
