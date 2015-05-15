@@ -25,14 +25,14 @@ public class SceneControllerSelection : MonoBehaviour {
 	IEnumerator ChooseNextAbility() {
 		while (_currAbility < SpriteSeeks.Length) {
 			_keyDownSpace = false;
-			_currSeekCoroutine = MoveSpriteSeek();
-			yield return StartCoroutine( _currSeekCoroutine );
+			_currSeekCoroutine = MoveSpriteSeek ();
+			yield return StartCoroutine (_currSeekCoroutine);
 			_currAbility++;
 		}
 
 		StartCoroutine (StartAnimationFinishedSelection ());
 	}
-
+	
 	IEnumerator MoveSpriteSeek() {
 		UISprite currSpriteSeek = SpriteSeeks [_currAbility];
 		while (!_keyDownSpace) {
