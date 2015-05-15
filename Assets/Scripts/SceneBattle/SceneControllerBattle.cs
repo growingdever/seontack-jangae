@@ -3,8 +3,12 @@ using System.Collections;
 
 public class SceneControllerBattle : MonoBehaviour {
 
-	public GameObject GameObjectPlayer;
-	public GameObject GameObjectMonster;
+	public Transform GameObjectPlayer;
+	public Transform GameObjectMonster;
+	public Transform TransformResultPanel;
+	public UISprite SpriteWin;
+	public UISprite SpriteLose;
+	public float ResultPanelTransitionTime;
 	BattleCharacter _battleCharacterPlayer;
 	BattleCharacter _battleCharacterMonster;
 
@@ -37,17 +41,15 @@ public class SceneControllerBattle : MonoBehaviour {
 
 		Debug.Log (_battleCharacterPlayer.HP + " / " + _battleCharacterMonster.HP);
 		if (_battleCharacterPlayer.HP <= 0) {
-			print ("LOSE!");
 			OnLose();
 		} else if (_battleCharacterMonster.HP <= 0) {
-			print ("WIN!");
 			OnWin();
 		}
 	}
 
 	public void OnWin() {
-		GameObjectPlayer.SetActive (false);
-		GameObjectMonster.SetActive (false);
+		GameObjectPlayer.gameObject.SetActive (false);
+		GameObjectMonster.gameObject.SetActive (false);
 
 		int highestStage = PlayerPrefs.GetInt (PreferenceKeys.KEY_HIGHEST_STAGE, 1);
 		int nextStage = PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1) + 1;
@@ -59,8 +61,8 @@ public class SceneControllerBattle : MonoBehaviour {
 	}
 
 	public void OnLose() {
-		GameObjectPlayer.SetActive (false);
-		GameObjectMonster.SetActive (false);
+		GameObjectPlayer.gameObject.SetActive (false);
+		GameObjectMonster.gameObject.SetActive (false);
 
 		PlayerPrefs.SetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1);
 
@@ -68,10 +70,20 @@ public class SceneControllerBattle : MonoBehaviour {
 	}
 
 	IEnumerator StartAnimationWin() {
+		TransformResultPanel.gameObject.SetActive (true);
+		SpriteLose.gameObject.SetActive (false);
+		SpriteWin.GetComponent<Animator> ().Play ("Idle");
+		yield return new WaitForSeconds (ResultPanelTransitionTime + 2);
+		Application.LoadLevel (1);
 		yield break;
 	}
 
 	IEnumerator StartAnimationLose() {
+		TransformResultPanel.gameObject.SetActive (true);
+		SpriteWin.gameObject.SetActive (false);
+		SpriteLose.GetComponent<Animator> ().Play ("Idle");
+		yield return new WaitForSeconds (ResultPanelTransitionTime + 2);
+		Application.LoadLevel (3);
 		yield break;
 	}
 

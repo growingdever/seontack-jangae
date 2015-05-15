@@ -43,7 +43,7 @@ MonoBehaviour:
   mSprites:
   - name: background
     x: 0
-    y: 664
+    y: 152
     width: 640
     height: 360
     borderLeft: 0
@@ -54,6 +54,32 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: lose
+    x: 0
+    y: 62
+    width: 399
+    height: 89
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 2
+    paddingRight: 11
+    paddingTop: 12
+    paddingBottom: 11
+  - name: win
+    x: 641
+    y: 426
+    width: 286
+    height: 86
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 8
+    paddingRight: 13
+    paddingTop: 14
+    paddingBottom: 12
   mPixelSize: 1
   mReplacement: {fileID: 0}
   mCoordinates: 0

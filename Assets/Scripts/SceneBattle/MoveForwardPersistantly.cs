@@ -13,6 +13,7 @@ public class MoveForwardPersistantly : MonoBehaviour {
 	public enum State {
 		Normal,
 		Collided,
+		Recrush,
 	};
 
 	State _currState;
@@ -30,6 +31,8 @@ public class MoveForwardPersistantly : MonoBehaviour {
 				if( this.gameObject.activeSelf ) {
 					StartCoroutine( TransitionStateWithDelay(0.5f) );
 				}
+			} else if( _currState == State.Recrush ) {
+				constantForce2d.relativeForce = new Vector2(Speed * 2.0f, 0);
 			}
 		}
 	}
@@ -39,6 +42,10 @@ public class MoveForwardPersistantly : MonoBehaviour {
 		constantForce2d = this.GetComponent<ConstantForce2D> ();
 
 		CurrentState = State.Normal;
+	}
+
+	void Update() {
+		this.transform.localRotation = Quaternion.identity;
 	}
 
 	void OnCollisionEnter2D(Collision2D collision) {
@@ -60,6 +67,6 @@ public class MoveForwardPersistantly : MonoBehaviour {
 	
 	IEnumerator TransitionStateWithDelay(float delay) {
 		yield return new WaitForSeconds (delay);
-		CurrentState = State.Normal;
+		CurrentState = State.Recrush;
 	}
 }
