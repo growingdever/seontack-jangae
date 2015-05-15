@@ -12,10 +12,15 @@ public class SceneControllerBattle : MonoBehaviour {
 		_battleCharacterPlayer = new BattleCharacter (
 			new AbilityData(VariableStorage.Instance.PlayerStats1, 
 		                VariableStorage.Instance.PlayerStats2, 
-		                VariableStorage.Instance.PlayerStats3));
-		_battleCharacterMonster = new BattleCharacter(
+		                VariableStorage.Instance.PlayerStats3)
+			,
 			Leveling.GetMonsterDataByStage(
-				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1)));
+				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1))
+			);
+		_battleCharacterMonster = new BattleCharacter(
+			Leveling.GetMonsterDataByStage2(
+				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1))
+			);
 	}
 
 	public void OnCollisionBetweenBattleCharacter() {
@@ -27,9 +32,12 @@ public class SceneControllerBattle : MonoBehaviour {
 		_battleCharacterPlayer.HP -= calculatedDamage2;
 		_battleCharacterMonster.HP -= calculatedDamage1;
 
+		Debug.Log (_battleCharacterPlayer.HP + " / " + _battleCharacterMonster.HP);
 		if (_battleCharacterPlayer.HP <= 0) {
+			print ("LOSE!");
 			OnLose();
 		} else if (_battleCharacterMonster.HP <= 0) {
+			print ("WIN!");
 			OnWin();
 		}
 	}

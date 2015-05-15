@@ -3,9 +3,9 @@ using System.Collections;
 
 public class VariableStorage {
 
-	public float PlayerStats1;
-	public float PlayerStats2;
-	public float PlayerStats3;
+	public float PlayerStats1 = 0.0f;
+	public float PlayerStats2 = 0.0f;
+	public float PlayerStats3 = 0.0f;
 
 
 	private static VariableStorage _instance;
