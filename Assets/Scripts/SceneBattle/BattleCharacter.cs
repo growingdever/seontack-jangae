@@ -13,12 +13,19 @@ public class BattleCharacter {
 		this.MaxHP = this.HP = 3000f * Calculate_F(opponent.Ability1, ability.Ability1, opponent.Error1);
 		this.ATTACK = 500f * Calculate_F(opponent.Ability2, ability.Ability2, opponent.Error2);
 		this.DEFENSE = 300f * Calculate_F(opponent.Ability3, ability.Ability3, opponent.Error3);
+
+		//Debug.Log ("player a:"+ability.Ability1+","+ability.Ability2+","+ability.Ability3);
+		//Debug.Log ("player o:"+opponent.Ability1+","+opponent.Ability2+","+opponent.Ability3);
+		Debug.Log ("player:" + MaxHP + "/" + ATTACK + "/" + DEFENSE);
 	}
 	// 몬스터의 능력을 계산하기 위한 BattleCharacter 생성자2
 	public BattleCharacter(AbilityData Diffuse) {
 		this.MaxHP = this.HP = 3000f * Diffuse.Ability1;
 		this.ATTACK = 500f * Diffuse.Ability2;
 		this.DEFENSE = 300f * Diffuse.Ability3;
+
+		//Debug.Log ("monster:"+Diffuse.Ability1+","+Diffuse.Ability2+","+Diffuse.Ability3);
+		Debug.Log ("monster:" + MaxHP + "/" + ATTACK + "/" + DEFENSE);
 	}
 
 	/* 	Calculate_F()
@@ -30,12 +37,12 @@ public class BattleCharacter {
 		float VALUE = Mathf.Abs (opponentAbility - playerAbility);
 		float _F;
 
-		if (VALUE == 0f)
+		if (VALUE < 0.05f)
 			_F = 1.0f;
-		else if (VALUE < playerError)// Error2 VALUE is smaller than 0.3f
+		else if (VALUE < playerError)	// Error2 VALUE is smaller than 0.3f
 			_F = 1.0f - VALUE;
 		else
-			_F = 0.7f;
+			_F = 0.7f;					// Default VALUE is 0.7f
 
 		return _F;
 	}
@@ -43,7 +50,7 @@ public class BattleCharacter {
 	public float CalculateDamage(BattleCharacter opponent) {
 
 		//TYPE 1 : ATTACK - DEFNSE (must be ATTACK > DEFENSE)
-		return (opponent.ATTACK - DEFENSE);
+		return (ATTACK - opponent.DEFENSE);
 		//TYPE 2 : (TYPE 1's VALUE)*LUCK;
 		//return (opponent.ATTACK - DEFENSE)*LUCK;
 	}
