@@ -30,7 +30,6 @@ public class SceneControllerBattle : MonoBehaviour {
 				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1) - 1)
 			);
 		GameObjectMonster.GetComponentInChildren<UISprite> ().spriteName = string.Format ("mon_{0:00}", PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1));
-		print (GameObjectMonster.GetComponentInChildren<UISprite> ().spriteName);
 	}
 
 	public void OnCollisionBetweenBattleCharacter() {

@@ -63,6 +63,8 @@ public class SceneControllerSelection : MonoBehaviour {
 			}
 			yield return new WaitForEndOfFrame();
 		}
+
+		InitPlayerStats ();
 	}
 
 	IEnumerator UpdateRemainingTime() {
@@ -70,6 +72,8 @@ public class SceneControllerSelection : MonoBehaviour {
 			LabelRemainingTime.text = string.Format("남은 시간 : {0}", i);
 			yield return new WaitForSeconds(1.0f);
 		}
+
+		InitPlayerStats ();
 		Application.LoadLevel(2);
 	}
 
