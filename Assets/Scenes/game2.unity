@@ -665,7 +665,7 @@ MonoBehaviour:
   SceneController: {fileID: 1773576108}
   Speed: 15
   BounceToSkyForce: 130
-  BackMovingTime: 1
+  BackMovingTime: .5
   RecrushFactor: 3
   EffectCrash: {fileID: 147838, guid: d85ac8e3bfb0547da84a5788f2ab9b7f, type: 2}
   IsEffectCreator: 1
@@ -1770,7 +1770,7 @@ MonoBehaviour:
   SceneController: {fileID: 1773576108}
   Speed: -15
   BounceToSkyForce: 130
-  BackMovingTime: 1
+  BackMovingTime: .5
   RecrushFactor: 3
   EffectCrash: {fileID: 147838, guid: d85ac8e3bfb0547da84a5788f2ab9b7f, type: 2}
   IsEffectCreator: 0
