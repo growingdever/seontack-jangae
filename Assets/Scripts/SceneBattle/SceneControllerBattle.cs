@@ -48,7 +48,7 @@ public class SceneControllerBattle : MonoBehaviour {
 	}
 
 	public void OnWin() {
-		GameObjectPlayer.gameObject.SetActive (false);
+		GameObjectPlayer.gameObject.SetActive (true);
 		GameObjectMonster.gameObject.SetActive (false);
 
 		int highestStage = PlayerPrefs.GetInt (PreferenceKeys.KEY_HIGHEST_STAGE, 1);
@@ -62,7 +62,7 @@ public class SceneControllerBattle : MonoBehaviour {
 
 	public void OnLose() {
 		GameObjectPlayer.gameObject.SetActive (false);
-		GameObjectMonster.gameObject.SetActive (false);
+		GameObjectMonster.gameObject.SetActive (true);
 
 		PlayerPrefs.SetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1);
 

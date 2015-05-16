@@ -367,12 +367,12 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 280
-  mHeight: 386
+  mWidth: 160
+  mHeight: 220
   mDepth: 0
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
-  keepAspectRatio: 0
+  keepAspectRatio: 2
   aspectRatio: .725388587
   mType: 0
   mFillDirection: 4
@@ -404,7 +404,7 @@ MonoBehaviour:
   - ch_03
   - ch_04
   - ch_05
-  Interval: .100000001
+  Interval: .0500000007
 --- !u!1 &519342653
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +431,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519342653}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -750, y: -77, z: 0}
+  m_LocalPosition: {x: -750, y: -174, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 501613712}
@@ -447,7 +447,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -140.839996, y: 50.2700005}
+  m_Offset: {x: -160.800003, y: 137.559998}
   serializedVersion: 2
   m_Size: {x: 450, y: 500}
 --- !u!50 &519342656
@@ -478,6 +478,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneController: {fileID: 1773576108}
   Speed: 15
+  BounceToSkyForce: 130
+  BackMovingTime: 1
+  RecrushFactor: 3
   EffectCrash: {fileID: 147838, guid: d85ac8e3bfb0547da84a5788f2ab9b7f, type: 2}
   IsEffectCreator: 1
 --- !u!247 &519342658
@@ -548,8 +551,8 @@ MonoBehaviour:
   updateAnchors: 1
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 399
-  mHeight: 494
+  mWidth: 270
+  mHeight: 334
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -933,7 +936,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509461886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 750, y: -15, z: 0}
+  m_LocalPosition: {x: 750, y: -101, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 776191948}
@@ -952,6 +955,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneController: {fileID: 1773576108}
   Speed: -15
+  BounceToSkyForce: 130
+  BackMovingTime: 1
+  RecrushFactor: 3
   EffectCrash: {fileID: 147838, guid: d85ac8e3bfb0547da84a5788f2ab9b7f, type: 2}
   IsEffectCreator: 0
 --- !u!247 &1509461889
@@ -974,7 +980,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 52.0999985, y: 0}
+  m_Offset: {x: 96.8799973, y: 61.0400009}
   serializedVersion: 2
   m_Size: {x: 450, y: 500}
 --- !u!50 &1509461891

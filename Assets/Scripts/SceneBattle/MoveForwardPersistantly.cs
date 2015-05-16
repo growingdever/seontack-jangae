@@ -5,6 +5,9 @@ public class MoveForwardPersistantly : MonoBehaviour {
 
 	public SceneControllerBattle SceneController;
 	public float Speed;
+	public float BounceToSkyForce;
+	public float BackMovingTime;
+	public float RecrushFactor;
 	public GameObject EffectCrash;
 	public bool IsEffectCreator;
 	Rigidbody2D rigidbody2d;
@@ -27,12 +30,12 @@ public class MoveForwardPersistantly : MonoBehaviour {
 				constantForce2d.relativeForce = new Vector2 (Speed, 0);
 			} else if( _currState == State.Collided ) {
 				constantForce2d.relativeForce = new Vector2(-1 * Speed * 0.5f, 0);
-				rigidbody2d.AddRelativeForce( new Vector2(0, 100) );
+				rigidbody2d.AddRelativeForce( new Vector2(0, BounceToSkyForce) );
 				if( this.gameObject.activeSelf ) {
-					StartCoroutine( TransitionStateWithDelay(0.5f) );
+					StartCoroutine( TransitionStateWithDelay(BackMovingTime) );
 				}
 			} else if( _currState == State.Recrush ) {
-				constantForce2d.relativeForce = new Vector2(Speed * 2.0f, 0);
+				constantForce2d.relativeForce = new Vector2(Speed * RecrushFactor, 0);
 			}
 		}
 	}
