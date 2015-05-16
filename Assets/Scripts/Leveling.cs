@@ -15,7 +15,6 @@ public class Leveling {
 	};	// Boss's Ability -> MAXIMUM's value(%)
 
 	public static AbilityData GetMonsterDataByStage(int stage) {
-		Debug.Log ("stage : " + stage);
 		//return _DATA
 		return new AbilityData (Leveling._DATA[stage,0], Leveling._DATA[stage,1], Leveling._DATA[stage,2]
 		                        ,Leveling._DATA[stage,3],Leveling._DATA[stage,4],Leveling._DATA[stage,5]);

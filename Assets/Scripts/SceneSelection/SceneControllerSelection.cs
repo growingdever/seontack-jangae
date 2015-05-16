@@ -52,11 +52,7 @@ public class SceneControllerSelection : MonoBehaviour {
 			_currSeekCoroutine = MoveSpriteSeek ();
 			yield return StartCoroutine (_currSeekCoroutine);
 			_currAbility++;
-			for( int i = 0; i < audioClips.Length; i ++ ) {
-				if( audioClips[i].audioName == "chulkuk" ) {
-					AudioSource.PlayOneShot(audioClips[i].audioClip);
-				}
-			}
+			PlaySound("chulkuk");
 		}
 
 		ButtonStart.GetComponent<Animator> ().enabled = true;
@@ -84,6 +80,14 @@ public class SceneControllerSelection : MonoBehaviour {
 
 		InitPlayerStats ();
 		Application.LoadLevel(2);
+	}
+
+	void PlaySound(string key) {
+		for( int i = 0; i < audioClips.Length; i ++ ) {
+			if( audioClips[i].audioName == key ) {
+				AudioSource.PlayOneShot(audioClips[i].audioClip);
+			}
+		}
 	}
 
 }

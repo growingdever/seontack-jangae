@@ -13,8 +13,11 @@ public class SceneControllerBattle : MonoBehaviour {
 	public UISprite SpriteWin;
 	public UISprite SpriteLose;
 	public float ResultPanelTransitionTime;
+	public AudioSource AudioSource;
+	public AudioClipEntry[] audioClips;
 	BattleCharacter _battleCharacterPlayer;
 	BattleCharacter _battleCharacterMonster;
+
 
 	void Start() {
 		_battleCharacterPlayer = new BattleCharacter (
@@ -62,6 +65,8 @@ public class SceneControllerBattle : MonoBehaviour {
 		} else if (_battleCharacterMonster.HP <= 0) {
 			OnWin();
 		}
+
+		PlaySound ("effect_crush");
 	}
 
 	public void OnWin() {
@@ -89,8 +94,15 @@ public class SceneControllerBattle : MonoBehaviour {
 	IEnumerator StartAnimationWin() {
 		TransformResultPanel.gameObject.SetActive (true);
 		SpriteLose.gameObject.SetActive (false);
+
+		AudioSource.Stop ();
+		float length = PlaySound ("effect_win");
+
 		SpriteWin.GetComponent<Animator> ().Play ("Idle");
 		yield return new WaitForSeconds (ResultPanelTransitionTime + 2);
+
+		PlayerPrefs.SetInt (PreferenceKeys.KEY_CURRENT_STAGE, PlayerPrefs.GetInt(PreferenceKeys.KEY_CURRENT_STAGE, 1));
+
 		Application.LoadLevel (1);
 		yield break;
 	}
@@ -98,10 +110,25 @@ public class SceneControllerBattle : MonoBehaviour {
 	IEnumerator StartAnimationLose() {
 		TransformResultPanel.gameObject.SetActive (true);
 		SpriteWin.gameObject.SetActive (false);
+
+		AudioSource.Stop ();
+		float length = PlaySound ("effect_lose");
+
 		SpriteLose.GetComponent<Animator> ().Play ("Idle");
-		yield return new WaitForSeconds (ResultPanelTransitionTime + 2);
+		yield return new WaitForSeconds (length + 2);
 		Application.LoadLevel (3);
 		yield break;
+	}
+
+	float PlaySound(string key) {
+		for( int i = 0; i < audioClips.Length; i ++ ) {
+			if( audioClips[i].audioName == key ) {
+				AudioSource.PlayOneShot(audioClips[i].audioClip);
+				return audioClips[i].audioClip.length;
+			}
+		}
+
+		return 0;
 	}
 
 }
