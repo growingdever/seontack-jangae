@@ -6,7 +6,11 @@ public class SceneControllerSelection : MonoBehaviour {
 	public UISprite[] SpriteSeeks;
 	public int SeekWidth;
 	public float SeekSpeed;
-	public Transform PanelBattleStart;
+	public UISprite SpriteFloorAura;
+	public UILabel LabelRemainingTime;
+	public UILabel LabelCritical;
+	public int ReadyTime;
+	public UISprite ButtonStart;
 
 	int _currAbility = 0;
 	IEnumerator _currSeekCoroutine;
@@ -14,6 +18,10 @@ public class SceneControllerSelection : MonoBehaviour {
 
 	void Start() {
 		StartCoroutine (ChooseNextAbility ());
+		SpriteFloorAura.GetComponent<Animator> ().Play ("Idle");
+
+		LabelCritical.text = string.Format ("숙련도 : {0}", PlayerPrefs.GetInt (PreferenceKeys.KEY_NUM_OF_RETRY, 100));
+		StartCoroutine (UpdateRemainingTime());
 	}
 
 	void Update() {
@@ -39,28 +47,27 @@ public class SceneControllerSelection : MonoBehaviour {
 			_currAbility++;
 		}
 
-		StartCoroutine (StartAnimationFinishedSelection ());
+		ButtonStart.GetComponent<Animator> ().enabled = true;
 	}
 	
 	IEnumerator MoveSpriteSeek() {
 		UISprite currSpriteSeek = SpriteSeeks [_currAbility];
+		float prevY = currSpriteSeek.transform.localPosition.y;
 		while (!_keyDownSpace) {
-			currSpriteSeek.transform.localPosition += new Vector3(SeekSpeed, 0.0f, 0.0f);
+			currSpriteSeek.transform.localPosition += new Vector3(SeekSpeed * Time.deltaTime, 0, 0.0f);
 			if( currSpriteSeek.transform.localPosition.x >= (float)SeekWidth / 2 ) {
-				currSpriteSeek.transform.localPosition = new Vector3(-1.0f * SeekWidth / 2, 0.0f, 0.0f);
+				currSpriteSeek.transform.localPosition = new Vector3(-1.0f * SeekWidth / 2, prevY, 0.0f);
 			}
 			yield return new WaitForEndOfFrame();
 		}
 	}
 
-	IEnumerator StartAnimationFinishedSelection() {
-		while (true) {
-			PanelBattleStart.transform.localPosition += new Vector3(0.0f, -5.0f, 0.0f);
-			if( PanelBattleStart.transform.localPosition.y <= 0 ) {
-				break;
-			}
-			yield return new WaitForEndOfFrame();
+	IEnumerator UpdateRemainingTime() {
+		for( int i = 30; i >= 0; i -- ) {
+			LabelRemainingTime.text = string.Format("남은 시간 : {0}", i);
+			yield return new WaitForSeconds(1.0f);
 		}
+		Application.LoadLevel(2);
 	}
 
 }
