@@ -3,6 +3,9 @@ using System.Collections;
 
 public class SceneControllerBattle : MonoBehaviour {
 
+	public UISprite SpriteBarPlayer;
+	public UISprite SpriteBarMonster;
+	public float BarWidth;
 	public Transform GameObjectPlayer;
 	public Transform GameObjectMonster;
 	public Transform TransformResultPanel;
@@ -38,6 +41,9 @@ public class SceneControllerBattle : MonoBehaviour {
 
 		_battleCharacterPlayer.HP -= calculatedDamage2;
 		_battleCharacterMonster.HP -= calculatedDamage1;
+
+		SpriteBarPlayer.width = (int)(1.0 * _battleCharacterPlayer.HP / _battleCharacterPlayer.MaxHP * BarWidth);
+		SpriteBarMonster.width = (int)(1.0 * _battleCharacterMonster.HP / _battleCharacterMonster.MaxHP * BarWidth);
 
 		Debug.Log (_battleCharacterPlayer.HP + " / " + _battleCharacterMonster.HP);
 		if (_battleCharacterPlayer.HP <= 0) {
