@@ -17,21 +17,20 @@ public class SceneControllerBattle : MonoBehaviour {
 	BattleCharacter _battleCharacterMonster;
 
 	void Start() {
-		// for debugging
-		PlayerPrefs.SetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1);
-
 		_battleCharacterPlayer = new BattleCharacter (
 			new AbilityData(VariableStorage.Instance.PlayerStats1, 
 		                VariableStorage.Instance.PlayerStats2, 
 		                VariableStorage.Instance.PlayerStats3)
 			,
 			Leveling.GetMonsterDataByStage(
-				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1))
+				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1) - 1)
 			);
 		_battleCharacterMonster = new BattleCharacter(
 			Leveling.GetMonsterDataByStage2(
-				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1))
+				PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1) - 1)
 			);
+		GameObjectMonster.GetComponentInChildren<UISprite> ().spriteName = string.Format ("mon_{0:00}", PlayerPrefs.GetInt (PreferenceKeys.KEY_CURRENT_STAGE, 1));
+		print (GameObjectMonster.GetComponentInChildren<UISprite> ().spriteName);
 	}
 
 	public void OnCollisionBetweenBattleCharacter() {
@@ -40,7 +39,7 @@ public class SceneControllerBattle : MonoBehaviour {
 
 		int luck = PlayerPrefs.GetInt (PreferenceKeys.KEY_NUM_OF_RETRY, 100);
 		float probability = luck * 0.001f;
-		float random = Random.Range (0.0f, 1.0f);
+		float random = Random.Range (0.0f, 100.0f);
 		if (probability > random) {
 			calculatedDamage1 *= 2;
 		}

@@ -11,6 +11,7 @@ public class SceneControllerSelection : MonoBehaviour {
 	public UILabel LabelCritical;
 	public int ReadyTime;
 	public UISprite ButtonStart;
+	public UILabel LabelStage;
 
 	int _currAbility = 0;
 	IEnumerator _currSeekCoroutine;
@@ -22,6 +23,8 @@ public class SceneControllerSelection : MonoBehaviour {
 
 		LabelCritical.text = string.Format ("숙련도 : {0}", PlayerPrefs.GetInt (PreferenceKeys.KEY_NUM_OF_RETRY, 100));
 		StartCoroutine (UpdateRemainingTime());
+
+		LabelStage.text = string.Format ("Stage : {0}", PlayerPrefs.GetInt(PreferenceKeys.KEY_CURRENT_STAGE, 0));
 	}
 
 	void Update() {
