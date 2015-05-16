@@ -78,6 +78,7 @@ public class SceneControllerBattle : MonoBehaviour {
 		if (nextStage > highestStage) {
 			PlayerPrefs.SetInt (PreferenceKeys.KEY_HIGHEST_STAGE, nextStage);
 		}
+		PlayerPrefs.SetInt (PreferenceKeys.KEY_CURRENT_STAGE, nextStage);
 
 		StartCoroutine (StartAnimationWin ());
 	}
@@ -99,9 +100,7 @@ public class SceneControllerBattle : MonoBehaviour {
 		float length = PlaySound ("effect_win");
 
 		SpriteWin.GetComponent<Animator> ().Play ("Idle");
-		yield return new WaitForSeconds (ResultPanelTransitionTime + 2);
-
-		PlayerPrefs.SetInt (PreferenceKeys.KEY_CURRENT_STAGE, PlayerPrefs.GetInt(PreferenceKeys.KEY_CURRENT_STAGE, 1));
+		yield return new WaitForSeconds (length + 2);
 
 		Application.LoadLevel (1);
 		yield break;
