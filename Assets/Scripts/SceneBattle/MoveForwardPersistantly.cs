@@ -56,9 +56,14 @@ public class MoveForwardPersistantly : MonoBehaviour {
 			CurrentState = State.Collided;
 
 			if( IsEffectCreator ) {
-				GameObject clone = Instantiate(EffectCrash.gameObject, this.transform.position, Quaternion.identity) as GameObject;
+				Vector3 v1 = this.transform.localPosition;
+				Vector3 v2 = collision.collider.transform.localPosition;
+				Vector3 newPos = (v2 - v1) / 2.0f;
+				newPos.y = this.transform.localPosition.y;
+
+				GameObject clone = Instantiate(EffectCrash.gameObject, Vector3.zero, Quaternion.identity) as GameObject;
 				clone.transform.parent = this.transform.parent;
-				clone.transform.localPosition = collision.transform.localPosition;
+				clone.transform.localPosition = newPos;
 				clone.transform.localScale = new Vector3(1, 1, 1);
 				clone.transform.localRotation = Quaternion.Euler(0, 180, 0);
 
