@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0bc48a57362d45c3ae358a586e29ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: -60
+  Speed: -100
   MaxHeight: 360
   MinHeight: 0
 --- !u!114 &202470599
@@ -529,7 +529,7 @@ GameObject:
   - 61: {fileID: 519342655}
   - 247: {fileID: 519342658}
   - 114: {fileID: 519342657}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +769,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 803286162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Result
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 957883439}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FloatingObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,7 +1005,7 @@ GameObject:
   - 4: {fileID: 1128755332}
   - 50: {fileID: 1128755334}
   - 61: {fileID: 1128755333}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1060,7 +1060,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1165506806}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: MonsterHP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1306,7 +1306,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1288892018}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerHP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1495,7 +1495,7 @@ GameObject:
   - 61: {fileID: 1509461890}
   - 247: {fileID: 1509461889}
   - 114: {fileID: 1509461888}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Monster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1789,6 +1789,7 @@ MonoBehaviour:
   SpriteBarPlayer: {fileID: 588475397}
   SpriteBarMonster: {fileID: 982016420}
   BarWidth: 400
+  DamageNumberEffect: {fileID: 11438334, guid: 8060bddbc1a7d4ecf9907389d4fd4dd3, type: 2}
   GameObjectPlayer: {fileID: 519342654}
   GameObjectMonster: {fileID: 1509461887}
   TransformResultPanel: {fileID: 803286162}
