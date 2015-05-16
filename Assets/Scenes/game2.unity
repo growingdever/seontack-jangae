@@ -244,6 +244,8 @@ MonoBehaviour:
   - InGameObj2_01
   - InGameObj2_02
   - InGameObj2_03
+  - InGameObj2_04
+  - InGameObj2_05
   Interval: .100000001
 --- !u!114 &202470598
 MonoBehaviour:
@@ -960,7 +962,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 608
   mHeight: 221
-  mDepth: 3
+  mDepth: 11
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 2
@@ -1141,7 +1143,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 1400
   mHeight: 900
-  mDepth: 2
+  mDepth: 10
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 0
@@ -1204,6 +1206,8 @@ MonoBehaviour:
   - InGameObj1_01
   - InGameObj1_02
   - InGameObj1_03
+  - InGameObj1_04
+  - InGameObj1_05
   Interval: .100000001
 --- !u!114 &1257227017
 MonoBehaviour:
@@ -1758,6 +1762,8 @@ MonoBehaviour:
   - InGameObj1_01
   - InGameObj1_02
   - InGameObj1_03
+  - InGameObj1_04
+  - InGameObj1_05
   Interval: .100000001
 --- !u!1 &1773576107
 GameObject:
@@ -1869,7 +1875,7 @@ MonoBehaviour:
   mPivot: 4
   mWidth: 566
   mHeight: 230
-  mDepth: 4
+  mDepth: 11
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
   keepAspectRatio: 2

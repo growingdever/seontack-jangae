@@ -50,16 +50,15 @@ public class SceneControllerBattle : MonoBehaviour {
 
 		GameObject go1 = NGUITools.AddChild (GameObjectPlayer.transform.parent.gameObject, DamageNumberEffect.gameObject);
 		go1.transform.localPosition = GameObjectPlayer.transform.localPosition;
-		go1.GetComponent<DamageNumberEffect> ().SetNumber (calculatedDamage2);
+		go1.GetComponent<DamageNumberEffect> ().SetNumber (calculatedDamage2 + Random.Range(0, 9));
 
 		GameObject go2 = NGUITools.AddChild (GameObjectPlayer.transform.parent.gameObject, DamageNumberEffect.gameObject);
 		go2.transform.localPosition = GameObjectMonster.transform.localPosition;
-		go2.GetComponent<DamageNumberEffect> ().SetNumber (calculatedDamage1);
+		go2.GetComponent<DamageNumberEffect> ().SetNumber (calculatedDamage1 + Random.Range(0, 9));
 
 		SpriteBarPlayer.width = (int)(1.0 * _battleCharacterPlayer.HP / _battleCharacterPlayer.MaxHP * BarWidth);
 		SpriteBarMonster.width = (int)(1.0 * _battleCharacterMonster.HP / _battleCharacterMonster.MaxHP * BarWidth);
 
-		Debug.Log (_battleCharacterPlayer.HP + " / " + _battleCharacterMonster.HP);
 		if (_battleCharacterPlayer.HP <= 0) {
 			OnLose();
 		} else if (_battleCharacterMonster.HP <= 0) {

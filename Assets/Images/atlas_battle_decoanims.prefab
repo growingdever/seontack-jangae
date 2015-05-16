@@ -42,21 +42,21 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 82629d59f8e4d43e793c5a1b04993309, type: 2}
   mSprites:
   - name: InGameObj1_01
-    x: 79
-    y: 90
-    width: 44
+    x: 0
+    y: 10
+    width: 43
     height: 38
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 1
-    paddingRight: 3
-    paddingTop: 4
-    paddingBottom: 6
+    paddingRight: 4
+    paddingTop: 1
+    paddingBottom: 9
   - name: InGameObj1_02
-    x: 80
-    y: 10
+    x: 159
+    y: 52
     width: 43
     height: 38
     borderLeft: 0
@@ -68,8 +68,21 @@ MonoBehaviour:
     paddingTop: 4
     paddingBottom: 6
   - name: InGameObj1_03
-    x: 80
+    x: 0
     y: 49
+    width: 44
+    height: 38
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 1
+    paddingRight: 3
+    paddingTop: 4
+    paddingBottom: 6
+  - name: InGameObj1_04
+    x: 159
+    y: 13
     width: 43
     height: 38
     borderLeft: 0
@@ -80,9 +93,22 @@ MonoBehaviour:
     paddingRight: 3
     paddingTop: 4
     paddingBottom: 6
+  - name: InGameObj1_05
+    x: 203
+    y: 52
+    width: 43
+    height: 38
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 2
+    paddingTop: 2
+    paddingBottom: 8
   - name: InGameObj2_01
-    x: 0
-    y: 10
+    x: 159
+    y: 91
     width: 79
     height: 37
     borderLeft: 0
@@ -94,8 +120,21 @@ MonoBehaviour:
     paddingTop: 9
     paddingBottom: 14
   - name: InGameObj2_02
-    x: 0
-    y: 48
+    x: 79
+    y: 50
+    width: 79
+    height: 38
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 13
+    paddingTop: 5
+    paddingBottom: 17
+  - name: InGameObj2_03
+    x: 79
+    y: 89
     width: 79
     height: 39
     borderLeft: 0
@@ -106,7 +145,20 @@ MonoBehaviour:
     paddingRight: 11
     paddingTop: 5
     paddingBottom: 16
-  - name: InGameObj2_03
+  - name: InGameObj2_04
+    x: 79
+    y: 11
+    width: 79
+    height: 38
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 4
+    paddingRight: 12
+    paddingTop: 5
+    paddingBottom: 17
+  - name: InGameObj2_05
     x: 0
     y: 88
     width: 78
