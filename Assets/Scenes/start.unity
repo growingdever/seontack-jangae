@@ -98,6 +98,7 @@ GameObject:
   - 20: {fileID: 71138767}
   - 114: {fileID: 71138766}
   - 81: {fileID: 71138765}
+  - 82: {fileID: 71138769}
   m_Layer: 9
   m_Name: Camera
   m_TagString: Untagged
@@ -199,6 +200,75 @@ Transform:
   - {fileID: 497692825}
   m_Father: {fileID: 362752144}
   m_RootOrder: 0
+--- !u!82 &71138769
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71138764}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 95bdfdbe0d76c4c6b9482918b4992656, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &100745922
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +592,7 @@ GameObject:
   - 65: {fileID: 505607965}
   - 114: {fileID: 505607964}
   - 114: {fileID: 505607966}
+  - 114: {fileID: 505607967}
   m_Layer: 9
   m_Name: SpriteStart
   m_TagString: Untagged
@@ -639,6 +710,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a1ebb0118a64f77bcee092b783584c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &505607967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505607961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d44bc69c2ca5f943b845318866dc1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 1a4fa5625c82d41198f8aceb6bd203f1, type: 3}
+  trigger: 0
+  volume: 1
+  pitch: 1
 --- !u!1 &921686388
 GameObject:
   m_ObjectHideFlags: 0

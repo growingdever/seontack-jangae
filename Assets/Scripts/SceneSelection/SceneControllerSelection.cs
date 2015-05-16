@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class SceneControllerSelection : MonoBehaviour {
 
@@ -12,6 +13,9 @@ public class SceneControllerSelection : MonoBehaviour {
 	public int ReadyTime;
 	public UISprite ButtonStart;
 	public UILabel LabelStage;
+	public AudioSource AudioSource;
+	public AudioClipEntry[] audioClips;
+
 
 	int _currAbility = 0;
 	IEnumerator _currSeekCoroutine;
@@ -48,6 +52,11 @@ public class SceneControllerSelection : MonoBehaviour {
 			_currSeekCoroutine = MoveSpriteSeek ();
 			yield return StartCoroutine (_currSeekCoroutine);
 			_currAbility++;
+			for( int i = 0; i < audioClips.Length; i ++ ) {
+				if( audioClips[i].audioName == "chulkuk" ) {
+					AudioSource.PlayOneShot(audioClips[i].audioClip);
+				}
+			}
 		}
 
 		ButtonStart.GetComponent<Animator> ().enabled = true;
