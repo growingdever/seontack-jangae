@@ -5,8 +5,8 @@ public class Leveling {
 	
 	private static float[,] _DATA = {
 		{0.8f, 0.2f, 0.5f, 0.2f, 0.2f, 0.2f},		//STAGE 1 BOSS
-		{0.8f, 0.2f, 0.5f, 0.2f, 0.2f, 0.2f},		//STAGE 2 BOSS
-		{0.8f, 0.2f, 0.5f, 0.2f, 0.2f, 0.2f}		//STAGE 3 BOSS
+		{0.4f, 0.1f, 0.25f, 0.2f, 0.2f, 0.2f},		//STAGE 2 BOSS
+		{0.2f, 0.8f, 0.5f, 0.2f, 0.2f, 0.2f}		//STAGE 3 BOSS
 	};	// Space & err Point  
 	private static float[] _DATA2 = {
 		0.7f,					//STAGE 1 BOSS Ability
