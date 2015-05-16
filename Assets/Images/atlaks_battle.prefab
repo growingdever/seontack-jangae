@@ -43,7 +43,7 @@ MonoBehaviour:
   mSprites:
   - name: background
     x: 0
-    y: 152
+    y: 664
     width: 640
     height: 360
     borderLeft: 0
@@ -54,9 +54,152 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
-  - name: lose
+  - name: effect_crash_01
+    x: 755
+    y: 734
+    width: 63
+    height: 72
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 78
+    paddingRight: 79
+    paddingTop: 74
+    paddingBottom: 74
+  - name: effect_crash_02
+    x: 641
+    y: 681
+    width: 113
+    height: 125
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 54
+    paddingRight: 53
+    paddingTop: 45
+    paddingBottom: 50
+  - name: effect_crash_03
+    x: 839
+    y: 690
+    width: 138
+    height: 153
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 43
+    paddingRight: 39
+    paddingTop: 32
+    paddingBottom: 35
+  - name: effect_crash_04
+    x: 839
+    y: 844
+    width: 163
+    height: 180
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 31
+    paddingRight: 26
+    paddingTop: 20
+    paddingBottom: 20
+  - name: effect_crash_05
+    x: 187
+    y: 454
+    width: 187
+    height: 209
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 20
+    paddingRight: 13
+    paddingTop: 4
+    paddingBottom: 7
+  - name: effect_crash_06
+    x: 641
+    y: 807
+    width: 197
+    height: 217
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 6
+    paddingRight: 17
+    paddingTop: 3
+    paddingBottom: 0
+  - name: effect_crash_07
     x: 0
-    y: 62
+    y: 452
+    width: 186
+    height: 211
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 24
+    paddingTop: 0
+    paddingBottom: 9
+  - name: effect_dash_01
+    x: 755
+    y: 685
+    width: 32
+    height: 48
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 3
+    paddingRight: 0
+    paddingTop: 2
+    paddingBottom: 0
+  - name: effect_dash_02
+    x: 788
+    y: 688
+    width: 26
+    height: 45
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 0
+    paddingTop: 5
+    paddingBottom: 0
+  - name: effect_dash_03
+    x: 978
+    y: 757
+    width: 25
+    height: 43
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 10
+    paddingRight: 0
+    paddingTop: 7
+    paddingBottom: 0
+  - name: effect_dash_04
+    x: 978
+    y: 801
+    width: 26
+    height: 42
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 9
+    paddingRight: 0
+    paddingTop: 8
+    paddingBottom: 0
+  - name: lose
+    x: 375
+    y: 574
     width: 399
     height: 89
     borderLeft: 0
@@ -68,8 +211,8 @@ MonoBehaviour:
     paddingTop: 12
     paddingBottom: 11
   - name: win
-    x: 641
-    y: 426
+    x: 375
+    y: 487
     width: 286
     height: 86
     borderLeft: 0
