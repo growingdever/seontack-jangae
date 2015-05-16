@@ -34,10 +34,15 @@ public class SceneControllerBattle : MonoBehaviour {
 	}
 
 	public void OnCollisionBetweenBattleCharacter() {
-		print ("damage!");
-
 		float calculatedDamage1 = _battleCharacterPlayer.CalculateDamage (_battleCharacterMonster);
 		float calculatedDamage2 = _battleCharacterMonster.CalculateDamage (_battleCharacterPlayer);
+
+		int luck = PlayerPrefs.GetInt (PreferenceKeys.KEY_NUM_OF_RETRY, 100);
+		float probability = luck * 0.001f;
+		float random = Random.Range (0.0f, 1.0f);
+		if (probability > random) {
+			calculatedDamage1 *= 2;
+		}
 
 		_battleCharacterPlayer.HP -= calculatedDamage2;
 		_battleCharacterMonster.HP -= calculatedDamage1;
